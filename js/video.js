@@ -2,13 +2,14 @@ var video;
 window.addEventListener("load", function() {
 	video = document.querySelector("#myVideo");
 });
-document.querySelector("#play").addEventListener("click", function() {
-	video.play();
-	console.log("Play Video");
-});
 document.querySelector("#pause").addEventListener("click", function() {
 	video.pause();
 	console.log("Pause Video");
+});
+document.querySelector("#play").addEventListener("click", function() {
+	video.play();
+	span = document.getElementById("volume").innerHTML = (video.volume*100) + "%";
+	console.log("Play Video");
 });
 document.querySelector("#faster").addEventListener("click", function(){
 	var curSpeed = video.playbackRate;
