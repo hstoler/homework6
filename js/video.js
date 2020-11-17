@@ -32,16 +32,13 @@ document.querySelector("#skip").addEventListener("click", function(){
 	video.play();
 })
 document.querySelector("#mute").addEventListener("click", function(){
-	var muted = video.muted;
 	if(video.muted == true){
 		video.muted = false;
-		console.log("Video Unmuted");
-		this.innerHTML = "Mute";
+		document.getElementById("mute").innerHTML="Mute";
 	}
 	else{
 		video.muted = true;
-		console.log("Video Muted");
-		this.innerHTML = "Unmute";
+		document.getElementById("mute").innerHTML="Unmute";
 	}
 })
 document.querySelector("#volumeSlider").addEventListener("change", function() {
@@ -51,8 +48,10 @@ document.querySelector("#volumeSlider").addEventListener("change", function() {
 });
 document.querySelector("#original").addEventListener("click", function(){
 	video.classList.remove("oldTime");
+	console.log("original");
 })
 document.querySelector("#old").addEventListener("click", function(){
 	video.classList.add("oldTime");
+	console.log("grayscale");
 })
 
